@@ -1,0 +1,286 @@
+.section {
+  margin-bottom: 80px;
+}
+
+div.example {
+  margin-left: 100px;
+  max-width: 750px;
+  margin-top: 56px;
+}
+
+div#typography {
+  max-width: 1000px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Mierb, Inter, arial, sans-serif;
+  color: black;
+  margin-top: 56px;
+}
+h1 {
+  font-size: 40px;
+  line-height: 50px;
+}
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 28px;
+}
+h4 {
+  font-size: 18px;
+  line-height: 28px;
+}
+h5 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+h6.subhead {
+  font-size: 16px;
+  line-height: 26px;
+  font-style: italic;
+}
+
+h6.topic-heading {
+  color: #98a2b3;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+p,
+ul,
+ol,
+dl {
+  font-family: Inter, arial, sans-serif;
+  color: #343741;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+ul {
+  padding-left: 14px;
+}
+
+ol {
+  padding-left: 2ch;
+}
+
+.blockquote {
+  /* color: #343741;
+  font-family: Inter, arial, sans-serif;
+  font-size: 16px;
+  line-height: 26px; */
+  font-style: italic;
+  padding-left: 27px;
+  border-left: 3px solid #019b8f;
+  max-width: 750px;
+}
+
+.blockquote p.source {
+  font-weight: bold;
+}
+
+a {
+  color: #0077cc;
+}
+
+.inset {
+  max-width: 750px;
+  padding: 20px;
+  background-color: #f2f5f7;
+}
+
+.inset :first-child {
+  margin-top: 0;
+}
+
+.inset :last-child {
+  margin-bottom: 0;
+}
+
+ul li,
+ol li {
+  margin-bottom: 8px;
+}
+
+ul li::marker {
+  color: #00857f;
+}
+
+code {
+  color: black;
+  font-family: Roboto Mono, monospace;
+  /* margin-right: 8px; */
+  /* margin-left: 8px; */
+}
+
+/* Use for single-term values that we don't want to wrap within, but
+which otherwise might, like `/` */
+code.literal {
+  white-space: nowrap;
+}
+
+dt {
+  margin-top: 40px;
+}
+
+dd {
+  margin-top: 16px;
+  margin-left: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+div#typo-main {
+  /* For typography page only */
+  margin-top: 75px;
+  margin-left: 200px;
+}
+
+div#main {
+  display: flex;
+  /* min-height: 800px; */
+  /* max-width: 1600px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#left-nav {
+  display: none;
+}
+
+div#content {
+  flex: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+div.hero {
+  background-color: #0080d5;
+  display: flex;
+  margin-left: -40px;
+  margin-right: -40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-image: url("img/bg-bottom-right.svg"), url("img/bg-top-left.svg");
+  background-position: 100% 100%, 0px 0px;
+  background-size: auto, auto;
+  background-repeat: no-repeat, no-repeat;
+}
+
+div.hero-contents {
+  height: 100%;
+  display: flex;
+  margin-top: 72px;
+  margin-bottom: 72px;
+  align-items: center;
+}
+
+div.hero-copy-container {
+  min-width: 320px;
+  max-width: 500px;
+  margin-right: 80px;
+  flex: 0 auto;
+}
+
+div.hero h1 {
+  margin-top: 0px;
+  color: #ffffff;
+}
+
+div.hero p {
+  color: #ffffff;
+}
+
+div.img-wrapper {
+  min-width: 300px;
+  max-width: 500px;
+}
+
+img#hero-img {
+  /* min-width: 200px; */
+  max-width: 100%;
+}
+
+div.landing-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+}
+
+div.landing-section, div.hero-contents {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.landing-section-alt {
+  background-color: #F5F7FA;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.stack-diagram-row {
+  display: flex;
+  align-items: center;
+}
+
+.stack-diagram-label{
+  color: #343741;
+  font-family: Mierb, Inter, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-align: left;
+  text-transform: uppercase;
+  width: 120px;
+}
+
+.stack-diagram-card {
+  padding: 32px;
+  flex-grow: 1;
+  text-align: center;
+  border: 1px solid #D4DAE5;
+  margin: 20px;
+
+  color: #000000;
+  font-family: Mierb, Inter, arial, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.stack-diagram-card img {
+  height: 32px;
+  width: 32px;
+}
+
+.stack-diagram-card:hover {
+  box-shadow: 0 2px 6px 0 rgba(152, 162, 179, 0.25), 0 10px 20px 0 rgba(21, 42, 78, 0.15);
+  border: 1px solid #ffffff;
+}
+
+@media (min-width: 769px) {
+  div#left-nav {
+    display: flex;
+    min-height: 600px;
+    min-width: 280px;
+    max-width: 320px;
+    border: 2px solid red;
+    flex: none;
+    height: 100vh;
+  }
+}
