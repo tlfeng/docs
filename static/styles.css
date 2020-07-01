@@ -1,3 +1,11 @@
+html, body {
+  color: rgb(52, 55, 65);
+  line-height: 26px;
+  font-family: Inter, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .section {
   margin-bottom: 80px;
 }
@@ -20,7 +28,6 @@ h5,
 h6 {
   font-family: Mierb, Inter, arial, sans-serif;
   color: black;
-  margin-top: 56px;
 }
 h1 {
   font-size: 40px;
@@ -56,16 +63,6 @@ h6.topic-heading {
   text-transform: uppercase;
 }
 
-p,
-ul,
-ol,
-dl {
-  font-family: Inter, arial, sans-serif;
-  color: #343741;
-  font-size: 16px;
-  line-height: 26px;
-}
-
 ul {
   padding-left: 14px;
 }
@@ -75,10 +72,6 @@ ol {
 }
 
 .blockquote {
-  /* color: #343741;
-  font-family: Inter, arial, sans-serif;
-  font-size: 16px;
-  line-height: 26px; */
   font-style: italic;
   padding-left: 27px;
   border-left: 3px solid #019b8f;
@@ -150,10 +143,7 @@ div#typo-main {
 
 div#main {
   display: flex;
-  /* min-height: 800px; */
-  /* max-width: 1600px; */
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 100%;
 }
 
 div#left-nav {
@@ -166,13 +156,23 @@ div#content {
   padding-right: 40px;
 }
 
-div.hero {
-  background-color: #0080d5;
-  display: flex;
+/* Use this when the background for a section needs to expand the full width */
+div.section-bg {
   margin-left: -40px;
   margin-right: -40px;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+div.main-content {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.hero-bg {
+  background-color: #0080d5;
+  display: flex;
   background-image: url("img/bg-bottom-right.svg"), url("img/bg-top-left.svg");
   background-position: 100% 100%, 0px 0px;
   background-size: auto, auto;
@@ -194,16 +194,11 @@ div.hero-copy-container {
   flex: 0 auto;
 }
 
-div.hero h1 {
-  margin-top: 0px;
+div.hero-copy-container * {
   color: #ffffff;
 }
 
-div.hero p {
-  color: #ffffff;
-}
-
-div.img-wrapper {
+div#hero-img-wrapper {
   min-width: 300px;
   max-width: 500px;
 }
@@ -219,14 +214,55 @@ div.landing-section {
 
 }
 
-div.landing-section, div.hero-contents {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+div.alt-bg {
+  background-color: #F5F7FA;
 }
 
-div.landing-section-alt {
-  background-color: #F5F7FA;
+div.cta-row {
+  display: flex;
+  /* Bump these out 15px so the card padding brings it back to even */
+  margin-left: -15px;
+  margin-right: -15px;
+  flex-wrap: wrap;
+}
+
+div.cta-card {
+  padding-top: 16px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+p.cta-text {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+div.cta-card:not(:last-child) {
+  border-right: 1px solid rgb(212, 218, 229)
+}
+
+
+/* TODO: It's not animating */
+.cta-link::after {
+  pointer-events: none;
+  content: "";
+  width: 0px;
+  height: 0px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  left: 8px;
+  border-style: solid;
+  border-width: 5.5px 0px 5.5px 5.5px;
+  border-color: transparent transparent transparent rgb(0, 119, 204);
+  transform: rotate(360deg);
+  transition: left 300ms ease-in-out 0s;
 }
 
 .text-center {
@@ -253,6 +289,7 @@ div.landing-section-alt {
   padding: 32px;
   flex-grow: 1;
   text-align: center;
+  box-sizing: border-box;
   border: 1px solid #D4DAE5;
   margin: 20px;
 
@@ -276,11 +313,12 @@ div.landing-section-alt {
 @media (min-width: 769px) {
   div#left-nav {
     display: flex;
-    min-height: 600px;
     min-width: 280px;
     max-width: 320px;
-    border: 2px solid red;
+    border-right: 1px solid #D4DAE5;
     flex: none;
-    height: 100vh;
+    /* Stand-in for search box */
+    border-top: 80px solid #F5F7FA;
+    box-sizing: border-box;
   }
 }
