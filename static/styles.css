@@ -135,6 +135,12 @@ dd {
   font-weight: bold;
 }
 
+.product-logo {
+  height: 32px;
+  width: 32px;
+  margin-right: 16px;
+}
+
 div#typo-main {
   /* For typography page only */
   margin-top: 75px;
@@ -300,14 +306,48 @@ div.cta-card:not(:last-child) {
   font-weight: 700;
 }
 
-.stack-diagram-card img {
-  height: 32px;
-  width: 32px;
-}
 
 .stack-diagram-card:hover {
   box-shadow: 0 2px 6px 0 rgba(152, 162, 179, 0.25), 0 10px 20px 0 rgba(21, 42, 78, 0.15);
   border: 1px solid #ffffff;
+  color: #0077CC;
+}
+
+.solutions {
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  margin-top: 56px;
+}
+
+.solution {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  min-width: 33%;
+}
+
+.solution-header {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.solution-row {
+  padding: 16px;
+  border-bottom: 1px solid #d4dae5;
+}
+
+.solution-row p {
+  margin-bottom: 0px;
+}
+
+.solution-row:hover {
+  box-shadow: 0 2px 6px 0 rgba(152, 162, 179, 0.25), 0 10px 20px 0 rgba(21, 42, 78, 0.15);
+  background-color: #ffffff;
+}
+
+.solution-row:hover h4 {
+  color: #0077CC;
 }
 
 @media (min-width: 769px) {
