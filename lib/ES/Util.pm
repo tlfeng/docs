@@ -75,7 +75,7 @@ sub build_chunked {
     push @$resources, $asciidoc_dir;
     eval {
         $output = run(
-            'asciidoctor', '-v', '--trace',
+            'asciidoctor', '--trace',
             '-r' => dir('resources/asciidoctor/lib/extensions.rb')->absolute,
             '-b' => 'html5',
             '-d' => 'book',

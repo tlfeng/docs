@@ -136,9 +136,9 @@ Elastic Cloud
 //////////
 Commonly referenced paths in commonly referenced repositories.
 //////////
-ifdef::elasticsearch-root[]
-:es-ref-dir: {elasticsearch-root}/docs/reference
-endif::elasticsearch-root[]
+ifdef::search-root[]
+:es-ref-dir: {search-root}/docs/reference
+endif::search-root[]
 
 //////////
 Kibana app and UI names
